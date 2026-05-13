@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="description" content="Block Blast tarzı blok yerleştirme oyunu — PWA" />
+    <title>Blok Patlat</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1>Blok Patlat</h1>
+        <div id="stats">
+          <span>Skor: <strong id="score">0</strong></span>
+          <span>Rekor: <strong id="best">0</strong></span>
+        </div>
+      </header>
+      <div id="level-strip" aria-label="Seviye ilerlemesi">
+        <span id="level-label">Seviye <strong id="level-num">1</strong></span>
+        <div id="level-track"><div id="level-fill"></div></div>
+        <span id="level-target">0 / 200</span>
+      </div>
+      <div id="toast" role="status" aria-live="polite" hidden></div>
+      <canvas id="game" aria-label="Oyun tahtası"></canvas>
+      <p id="hint">
+        Bu seviyede gösterilen puana ulaşınca bir üst seviyeye geçersin. Blokları sürükleyip yerleştir; satır veya sütun dolunca patlar. Üç parça bitince yenileri gelir; hiçbiri sığmazsa oyun biter.
+      </p>
+    </div>
+
+    <div id="overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+      <div class="panel">
+        <h2 id="overlay-title">Blok Patlat</h2>
+        <p id="overlay-text">
+          Block Blast tarzı: blokları yerleştir, satır ve sütunları temizle. Üst barda seviye hedefi var — doldurunca yeni seviye ve daha yüksek hedef. Telefonda
+          <strong>Ana ekrana ekle</strong> ile uygulama gibi kullanabilirsin.
+        </p>
+        <button type="button" id="btn-start">Başla</button>
+      </div>
+    </div>
+
+    <script src="js/game.js" defer></script>
+  </body>
+</html>
