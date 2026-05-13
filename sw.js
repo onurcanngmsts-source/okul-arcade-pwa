@@ -1,6 +1,5 @@
-/* Basit offline önbellek — PWA kurulumu için */
-const CACHE = "blokpatlat-v3";
-const ASSETS = ["./", "./index.html", "./css/style.css", "./js/game.js", "./manifest.json", "./icon.svg"];
+const CACHE = "blokpatlat-v5-icons";
+const ASSETS = ["./", "./index.html", "./css/style.css", "./js/game.js", "./manifest.json", "./icon.svg", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
