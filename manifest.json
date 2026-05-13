@@ -1,18 +1,39 @@
 {
+  "id": "https://onurcanngmsts-source.github.io/okul-arcade-pwa/",
   "name": "Blok Patlat",
   "short_name": "BlokPatlat",
-  "description": "Block Blast tarzı blok bulmaca — okul projesi PWA",
-  "start_url": "./index.html",
+  "description": "Block Blast tarzı blok bulmaca",
+  "start_url": "index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#6366f1",
   "orientation": "portrait",
+  "categories": ["games", "entertainment"],
   "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
       "src": "icon.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
